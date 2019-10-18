@@ -87,10 +87,15 @@ SELECT * FROM customer
 SELECT name, email, address FROM customer 
 ```
 
-## How make a DUMP
+## DUMP
 
-#### TABLE DUMP
+#### TABLE DUMP ( CREATE A SAMPLE DATA )
 
 ```sql
-  pg_dump -U postgres -t public.column -t public.column -t public.column -a table_name --inserts > dump.sql 
+  pg_dump -U postgres -t public.column -t public.column -t public.column -a table_name --inserts > sample_data.sql 
+```
+#### RESTORE DB WITH DUMP
+
+```sql
+psql -U db_user db_name < dump_name.bak
 ```
