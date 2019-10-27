@@ -1,7 +1,16 @@
 ## DOCKER
 
+Create and init a container (-p before ':' is the local port and after is container port)
+``` sh
+ sudo docker run --name container_name -r POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres:latest
+```
+
 Create POSTGRES table dump using docker.
- - sudo docker exec postgres_last pg_dump -U postgres -t public.column -t public.column -t public.column -a table_name --inserts > dump.sql
+```sh
+ sudo docker exec postgres_last pg_dump -U postgres -t public.column -t public.column -t public.column -a table_name --inserts > dump.sql
+```
 
 Entering in a postgres console on container.
- - docker exec -it postgres_last psql -U postgres
+``` sh
+docker exec -it postgres_last psql -U postgres
+```
