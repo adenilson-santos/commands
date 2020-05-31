@@ -12,14 +12,13 @@
                 "build": "tsc",
                 "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
               },
-        `
     - --inspect server to improve debug on vscode
     - --transpileOnly is to not create js files and improve peformance in development
     - --ignore-watch node_modules (is to ignore changes on node_modules)
 - install extension editorconfig and create your file on root of project
     - [see documentation](https://editorconfig.org/)
     
-## configure eslint
+## configure eslint and prettier
 - yarn add eslint
     - yarn eslint --init
     - see after configurations if has any more configuration on console (maybe have to install more things if eslint request)
@@ -27,3 +26,12 @@
     - [see at this repository for vscode settings](https://github.com/xdeni/commands/blob/master/vscode.settings.json)
 - configure eslintconfig
     - [see at this repository for eslintrc.json](https://github.com/xdeni/commands/blob/master/eslintrc.json)
+- configure eslintignore
+    - add these
+        node_modules
+        dist
+- add prettier
+    - at console run this command
+        ```console
+            sudo yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
