@@ -40,24 +40,24 @@
         [here is](https://github.com/xdeni/commands/blob/master/prettier.config.js)
 
 ## configure debugging
-    - goto bug/play icon
-        - click on create lauch file, anything that
-        - and use those configurations
-            ```json
+- goto bug/play icon
+    - click on create lauch file, anything that
+    - and use those configurations
+        ```json
+            {
+              "version": "0.2.0",
+              "configurations": [
                 {
-                  "version": "0.2.0",
-                  "configurations": [
-                    {
-                      "type": "node",
-                      "request": "attach",
-                      "protocol": "inspector",
-                      "name": "Denug",
-                      "skipFiles": [
-                        "<node_internals>/**"
-                      ],
-                      "outFiles": [
-                        "${workspaceFolder}/**/*.js"
-                      ]
-                    }
+                  "type": "node",
+                  "request": "attach",
+                  "protocol": "inspector",
+                  "name": "Denug",
+                  "skipFiles": [
+                    "<node_internals>/**"
+                  ],
+                  "outFiles": [
+                    "${workspaceFolder}/**/*.js"
                   ]
                 }
+              ]
+            }
