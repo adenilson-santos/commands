@@ -28,10 +28,36 @@
     - [see at this repository for eslintrc.json](https://github.com/xdeni/commands/blob/master/eslintrc.json)
 - configure eslintignore
     - add these
-        node_modules
-        dist
+        ```md
+            node_modules
+            dist
 - add prettier
     - at console run this command
         ```console
             sudo yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+   - for use with eslint use same settings.json that was inputed before 
+   - add file prettier.config.js for not conflict with eslint
+        [here is](https://github.com/xdeni/commands/blob/master/prettier.config.js)
 
+## configure debugging
+    - goto bug/play icon
+        - click on create lauch file, anything that
+        - and use those configurations
+            ```json
+                {
+                  "version": "0.2.0",
+                  "configurations": [
+                    {
+                      "type": "node",
+                      "request": "attach",
+                      "protocol": "inspector",
+                      "name": "Denug",
+                      "skipFiles": [
+                        "<node_internals>/**"
+                      ],
+                      "outFiles": [
+                        "${workspaceFolder}/**/*.js"
+                      ]
+                    }
+                  ]
+                }
