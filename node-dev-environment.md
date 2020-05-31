@@ -24,6 +24,6 @@
     - yarn eslint --init
     - see after configurations if has any more configuration on console (maybe have to install more things if eslint request)
 - install eslint extension vscode
-    - [see at this repository for vscode settings]()
+    - [see at this repository for vscode settings](https://github.com/xdeni/commands/blob/master/vscode.settings.json)
 - configure eslintconfig
-    - [see at this repository for eslintrc.json]()
+    - [see at this repository for eslintrc.json](https://github.com/xdeni/commands/blob/master/eslintrc.json)
