@@ -23,3 +23,6 @@ Entering in a postgres console on container.
 ``` sh
 docker exec -it postgres_last psql -U postgres
 ```
+
+#### How see logs
+docker logs 'nome da imagem'
